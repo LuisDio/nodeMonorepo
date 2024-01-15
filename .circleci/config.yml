@@ -4,7 +4,7 @@ version: 2.1
 setup: true
 
 # the path-filtering orb is required to continue a pipeline based on
-# the path of an updated fileset
+# the path of an updated fileset test
 orbs:
   path-filtering: circleci/path-filtering@0.1.1
 
@@ -16,5 +16,5 @@ workflows:
           name: check-updated-component
           mapping: |
             packages/components/locations/.* build-locations-job true
-          base-revision: develop
+          base-revision: main
           config-path: .circleci/config_continue.yml
