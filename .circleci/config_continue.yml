@@ -5,13 +5,13 @@ orbs:
   aws-cli: circleci/aws-cli@2.0.3
 
 parameters:
-  build-locations-job:
+  build-sessions-job:
     type: boolean
     default: false
     
 workflows:
-  run-npm-command:
-    when: << pipeline.parameters.build-locations-job >>
+  run-npm-build:
+    when: << pipeline.parameters.build-sessions-job >>
     jobs:
       - node/run:
           npm-run: build
