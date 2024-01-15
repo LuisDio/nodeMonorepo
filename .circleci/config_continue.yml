@@ -10,10 +10,8 @@ parameters:
     default: false
     
 workflows:
-  dev:
+  run-npm-command:
     when: << pipeline.parameters.build-locations-job >>
     jobs:
-      install-node:
-        steps:
-          - node/run:
-            yarn-run: build
+      - node/run:
+          npm-run: build
