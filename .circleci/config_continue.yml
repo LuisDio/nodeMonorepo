@@ -10,7 +10,7 @@ parameters:
     default: false
     
 workflows:
-  run-npm-build:
+  run-npm-command:
     when: << pipeline.parameters.build-sessions-job >>
     jobs:
       - node/run:
