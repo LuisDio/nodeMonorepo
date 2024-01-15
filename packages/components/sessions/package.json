@@ -1,39 +1,38 @@
 {
-  "name": "@sample/server",
-  "version": "1.0.0",
-  "type": "module",
-  "exports": {
-    ".": "./dist/index.js",
-    "./package.json": "./package.json"
+  "name": "session",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "test": "node --test --enable-source-maps",
-    "start": "node --enable-source-maps ./dist/server-main.js"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "peerDependencies": {
-    "react": ">=18",
-    "react-dom": ">=18"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "dependencies": {
-    "@sample/app": "^1.0.0",
-    "compression": "^1.7.4",
-    "express": "^4.18.2"
-  },
-  "files": [
-    "dist",
-    "src",
-    "!dist/test",
-    "!dist/tsconfig.tsbuildinfo",
-    "!src/tsconfig.json"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:wixplosives/sample-monorepo.git",
-    "directory": "packages/server"
-  },
-  "private": true,
-  "publishConfig": {
-    "access": "public"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
