@@ -1,0 +1,19 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.2.0
+  aws-cli: circleci/aws-cli@2.0.3
+
+parameters:
+  build-locations-job:
+    type: boolean
+    default: false
+    
+workflows:
+  dev:
+    when: << pipeline.parameters.build-locations-job >>
+    jobs:
+      install-node:
+        steps:
+          - node/run:
+            yarn-run: build
