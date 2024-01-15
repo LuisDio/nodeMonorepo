@@ -1,3 +1,4 @@
+// Just a comment
 import type React from "react";
 
 export interface MainProps {
